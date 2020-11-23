@@ -1,18 +1,10 @@
 package almacenamiento;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.LinkedList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import procesos.Computadoras;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
+
+
 
 
 // Clase encargada de la comunicación entre la aplicación y la base de datos.
@@ -21,10 +13,8 @@ public class BaseDatos {
     
     private Connection con = null; 
     
-    /**
-     * Método que genera la conexión con la base de datos.
-     * @return Regresa una conexión activa con la base de datos. 
-     */
+    //Método que genera la conexión con la base de datos.
+    
     public Connection conecta(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
