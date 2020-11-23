@@ -12,7 +12,6 @@ public class Computadoras {
     private String discoDuro;
     private String sistemaOperativo;
     private String software;
-    private String antivirus;
     private String responsable;
     private String ubicacion;
     private String observaciones;
@@ -21,7 +20,7 @@ public class Computadoras {
     public Computadoras() {
     }
 
-    public Computadoras(String placa, String marcaModelo, String tipo, String procesador, String placaBase, String memoriaRam, String discoDuro, String sistemaOperativo, String software, String antivirus, String responsable, String ubicacion, String observaciones, boolean inactivo) {
+    public Computadoras(String placa, String marcaModelo, String tipo, String procesador, String placaBase, String memoriaRam, String discoDuro, String sistemaOperativo, String software, String responsable, String ubicacion, String observaciones, boolean inactivo) {
         this.placa = placa;
         this.marcaModelo = marcaModelo;
         this.tipo = tipo;
@@ -31,7 +30,6 @@ public class Computadoras {
         this.discoDuro = discoDuro;
         this.sistemaOperativo = sistemaOperativo;
         this.software = software;
-        this.antivirus = antivirus;
         this.responsable = responsable;
         this.ubicacion = ubicacion;
         this.observaciones = observaciones;
@@ -110,14 +108,7 @@ public class Computadoras {
         this.software = software;
     }
 
-    public String getAntivirus() {
-        return antivirus;
-    }
-
-    public void setAntivirus(String antivirus) {
-        this.antivirus = antivirus;
-    }
-
+   
     public String getResponsable() {
         return responsable;
     }
