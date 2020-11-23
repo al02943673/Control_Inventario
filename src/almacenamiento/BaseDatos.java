@@ -44,25 +44,7 @@ public class BaseDatos {
         return cambio;
     }
     
-    //@param sql Parametro correspondiente para generar la lista de componentes
-     
-    public LinkedList listarComponentes(String sql){
-        LinkedList lista = new LinkedList();
-        try {
-            Statement stm = conecta().createStatement();
-            ResultSet rs = stm.executeQuery(sql);
-            while (rs.next()) {
-                lista.add(rs.getString(1));
-            }
-            stm.close();
-            rs.close();
-            con.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(BaseDatos.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return lista;
-    }
-    
+       
     //Método utilizado para encontrar IDs dentro de la base de datos.
      
     public int consultaIDs(String sql){
@@ -124,7 +106,6 @@ public class BaseDatos {
                     "DISCO DURO",
                     "SISTEMA OPERATIVO",
                     "SOFTWARE OFFICE",
-                    "ANTIVIRUS",
                     "RESPONSABLE",
                     "UBICACIÓN",
                     "OBSERVACIÓN"}, 0);
