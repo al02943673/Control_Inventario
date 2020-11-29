@@ -1,10 +1,18 @@
 package almacenamiento;
 
-import java.sql.*;
-import java.util.*;
-import javax.swing.*;
-
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import procesos.Computadoras;
 
 
 // Clase encargada de la comunicación entre la aplicación y la base de datos.
@@ -13,8 +21,8 @@ public class BaseDatos {
     
     private Connection con = null; 
     
-    //Método que genera la conexión con la base de datos.
-    
+    // Método que genera la conexión con la base de datos.
+     
     public Connection conecta(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -44,7 +52,25 @@ public class BaseDatos {
         return cambio;
     }
     
-       
+    //sql Parametro correspondiente para generar la lista de componentes
+     
+    public LinkedList listarComponentes(String sql){
+        LinkedList lista = new LinkedList();
+        try {
+            Statement stm = conecta().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            while (rs.next()) {
+                lista.add(rs.getString(1));
+            }
+            stm.close();
+            rs.close();
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(BaseDatos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lista;
+    }
+    
     //Método utilizado para encontrar IDs dentro de la base de datos.
      
     public int consultaIDs(String sql){
@@ -106,6 +132,7 @@ public class BaseDatos {
                     "DISCO DURO",
                     "SISTEMA OPERATIVO",
                     "SOFTWARE OFFICE",
+                    "ANTIVIRUS",
                     "RESPONSABLE",
                     "UBICACIÓN",
                     "OBSERVACIÓN"}, 0);
