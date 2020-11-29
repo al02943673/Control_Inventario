@@ -9,10 +9,9 @@ Proyecto para la fase final de la materia de Taller de productividad basada en h
 * [Descripción](#mi-titulo-a-anclar)
 * [Problema identificado](#mi-titulo-a-anclar)
 * [Solución](#mi-titulo-a-anclar)
-* [Bloques de codígo](#mi-titulo-a-anclar)
-      * [Sintaxis conexión a base de datos](#mi-titulo-a-anclar)
+* [Instalación](#mi-titulo-a-anclar)
 * [Arquitectura](#mi-titulo-a-anclar)
-* [FAQS](#mi-titulo-a-anclar)
+* [Roadmap](#mi-titulo-a-anclar)
 * [Referencias](#mi-titulo-a-anclar)
 * [Contribución](#mi-titulo-a-anclar)
 
@@ -28,22 +27,27 @@ Cuando no se cuenta con un Sistema Inventarios completo para llevar un control d
 ### Solución:
 La solución que se planteo fue desarrollar un programa para el control de Invenmtarios de Equipo de Cómputo para el área de TI, dónde se darán de Alta los Equipos con sus características principales, se podràn editar o eliminar y guardará un registro de su ubicacíon y si se encuentra asignado a algún empleado
 
-### Bloques de codígo
-Sintaxis index
+### Instalación
 
-// Bloque de codígo para relacionar todos las funciones 
+Es necesario instalar:
 
+Java Netbeans
+https://netbeans.org/index_es.html
 
-// Bloque de codígo para la Conexion con la base de datos 
+ JDK 8
+ https://www.oracle.com/mx/java/technologies/javase/javase-jdk8-downloads.html
+ 
+ Mysql
+ https://www.mysql.com/downloads/
+ 
+ MySQL Workbench
+ https://dev.mysql.com/downloads/workbench/
+ 
+Crear la base de datos que se incluye en los archivos del repositorio e importarlo en workbench
+
+Descargar el proyecto en una carpeta, abrirlo con Netbeans despuès de haber instalado jdk y creado la base de datos y darle run (flecha verde)
   
-
-// Bloque de codígo para Alta de Computadoras 
-
-   
-//Bloque de codígo para insertar los registros en la base de datos 
-
-// Bloque de codígo para realizar la consulta en la base de datos
-      
+ 
 
 ### Arquitectura
 Es necesario definir la aqrquitectura que se necesita para ejecutar este programa de forma local, por lo que acontinuación se describe cada uno de los elementos necesarios.
@@ -66,10 +70,12 @@ Es necesario definir la aqrquitectura que se necesita para ejecutar este program
 	MySQL Workbench 8.0.22
 
 
-### FAQS
+### Roadmap
 
-Para mayor información sobre la arquitectura utilizada 
-
+Para la siguiente versión, 
+- creará una lista para imprimir de todos los activos registrados 
+- Dar de alta componentes fisicos y virtuales como licencias
+- crear Base de Datos en la nube
 
 
 ### Referencias
@@ -77,6 +83,13 @@ Para mayor información sobre la arquitectura utilizada
 https://github.com/al02943673/Inventario_Computadoras
 
 ### Contribución:
+
+Pasos para clonar el repositorio:
+https://docs.github.com/es/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+
+heroku:
+https://www.heroku.com/
+
 
 Elaborado por **Kurt Halbinger** matrícula 02943673 **Tecmilenio**
 Taller de Productividad basada en Herramientas Tecnológicas
